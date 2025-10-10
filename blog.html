@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Fitness Blog • SageMovementLab</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="What's new in fitness? Share wins, tips, and questions with Coach Nat at SageMovementLab.">
+  <link rel="stylesheet" href="Sage.css">
+  <head>
+  <title>Personal Training 101 • SageMovementLab</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="What to expect with Coach Nat: approach, pillars, and process for personal training at SageMovementLab.">
+  <meta name="keywords" content="personal training, fitness coach, SageMovementLab, strength training, self defense, weight loss, Coach Nat, wellness, online training, NASM certified">
+  <meta name="author" content="Coach Nat, SageMovementLab">
+  <link rel="stylesheet" href="Sage.css">
+  ...
+</head>
+
+]
+  <style>
+    .blog-prompt {
+      background: rgba(122,178,167,0.08);
+      border-radius: 12px;
+      padding: 2rem 1.5rem;
+      max-width: 600px;
+      margin: 2rem auto;
+    }
+    .blog-title {
+      margin: 0 0 0.75rem;
+      color: var(--accent);
+      font-weight: 700;
+      text-align: center;
+    }
+    .comment-form {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: stretch !important;
+      gap: 1.25rem !important;
+    }
+    .comment-form .form-field {
+      display: flex !important;
+      flex-direction: column !important;
+      width: 100% !important;
+      text-align: left;
+    }
+    .comment-form .form-field span {
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.4rem;
+    }
+    .comment-form input,
+    .comment-form textarea {
+      width: 100% !important;
+      padding: 0.75rem 0.9rem;
+      border: 1px solid #e2e8e4;
+      border-radius: 10px;
+      background: #fff;
+      font: inherit;
+    }
+    .comment-form input:focus,
+    .comment-form textarea:focus {
+      outline: 3px solid var(--primary);
+      border-color: var(--secondary);
+    }
+    .comment-form .btn {
+      align-self: center !important;       
+      background: var(--primary);
+      color: #000;
+      border: none;
+      border-radius: 9999px;
+      padding: 0.9rem 2rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.1s ease-in-out;
+    }
+    .comment-form .btn:hover { transform: scale(1.03); }
+
+    @media (min-width: 768px) {
+      .comment-form { grid-template-columns: none !important; }
+      .comment-form .form-field { grid-column: auto !important; }
+    }
+
+
+    .comments-wrap { max-width: 600px; margin: 2rem auto; }
+    .comment-list {
+      list-style: none; padding: 0; margin: 0;
+      display: flex; flex-direction: column; gap: 1rem;
+    }
+    .comment-card {
+      background: #fff;
+      border: 1px solid #e2e8e4;
+      border-radius: 12px;
+      padding: 1rem 1rem 0.9rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .comment-card:nth-child(even) { background: #f8fbf9; } 
+    .comment-meta {
+      display: flex; justify-content: space-between; gap: 1rem;
+      color: var(--accent); font-size: 0.9rem; margin-bottom: 0.35rem;
+    }
+    .comment-text { margin: 0; line-height: 1.45; }
+    .comment-empty {
+      background: #fff; border: 1px solid #e2e8e4; border-radius: 10px;
+      padding: 1rem; text-align: center; color: #6c776f; font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+
+    <header class="site-header" role="banner">
+      <h1 class="sr-only">SageMovementLab</h1>
+      <a class="logo-link" href="index.html" aria-label="SageMovementLab home">
+        <img src="sagelogo.jpeg" alt="SageMovementLab logo" class="hero-logo">
+      </a>
+    </header>
+
+    <nav class="main-nav" role="navigation" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="trainingprograms.html">Training Programs</a></li>
+        <li><a href="personaltraining101.html">Personal Training 101</a></li>
+        <li><a href="self-defense.html">Self-Defense</a></li>
+        <li><a href="blog.html" class="active">Fitness Blog</a></li>
+        <li><a href="contact.html">Book / Contact</a></li>
+      </ul>
+    </nav>
+
+    <main class="content">
+      <h2>Fitness Blog</h2>
+      <p>What’s new in fitness? Share your wins, tips, or questions — let’s learn together.</p>
+
+      <section class="blog-prompt">
+        <h3 class="blog-title">“What’s new in fitness?”</h3>
+
+        <form id="commentForm" class="comment-form" novalidate>
+          <label class="form-field">
+            <span>Name</span>
+            <input type="text" id="name" name="name" placeholder="Your name (optional)">
+          </label>
+
+          <label class="form-field">
+            <span>Your Comment</span>
+            <textarea id="comment" name="comment" rows="5" placeholder="Share something you learned, tried, or noticed…" required></textarea>
+          </label>
+
+          <button class="btn" type="submit">Post Comment</button>
+          <p id="formMsg" class="form-msg" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section aria-labelledby="comments-title" class="comments-wrap">
+        <h3 id="comments-title">Latest Comments</h3>
+        <ul id="commentList" class="comment-list" aria-live="polite"></ul>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      © <span id="year-blog"></span> SageMovementLab<br>
+      Email: <a class="email" href="mailto:NatSage23@gmail.com">NatSage23@gmail.com</a>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById('year-blog').textContent = new Date().getFullYear();
+
+    const LS_KEY = 'sml_blog_comments_v1';
+    const form = document.getElementById('commentForm');
+    const nameEl = document.getElementById('name');
+    const commentEl = document.getElementById('comment');
+    const listEl = document.getElementById('commentList');
+    const msgEl = document.getElementById('formMsg');
+
+    const escapeHTML = (str) =>
+      str.replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;', "'":'&#39;'}[c]));
+
+    function loadComments() {
+      try {
+        const saved = JSON.parse(localStorage.getItem(LS_KEY) || '[]');
+        render(saved);
+      } catch {
+        render([]);
+      }
+    }
+
+    function saveComments(comments) {
+      localStorage.setItem(LS_KEY, JSON.stringify(comments));
+    }
+
+    function render(comments) {
+      listEl.innerHTML = '';
+      if (!comments.length) {
+        listEl.innerHTML = '<li class="comment-empty">Be the first to share something new!</li>';
+        return;
+      }
+    
+      comments.slice().reverse().forEach(({ name, text, ts }) => {
+        const li = document.createElement('li');
+        const date = new Date(ts);
+        const when = date.toLocaleString([], { dateStyle: 'medium', timeStyle: 'short' });
+
+        li.className = 'comment-card';
+        li.innerHTML = `
+          <div class="comment-meta">
+            <strong>${escapeHTML(name || 'Anonymous')}</strong>
+            <span class="comment-date">${escapeHTML(when)}</span>
+          </div>
+          <p class="comment-text">${escapeHTML(text)}</p>
+        `;
+        listEl.appendChild(li);
+      });
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = (nameEl.value || '').trim();
+      const text = (commentEl.value || '').trim();
+      if (!text) {
+        msgEl.textContent = 'Please write a comment before posting.';
+        return;
+      }
+
+      let comments = [];
+      try { comments = JSON.parse(localStorage.getItem(LS_KEY) || '[]'); } catch {}
+      comments.push({ name, text, ts: Date.now() });
+      saveComments(comments);
+      render(comments);
+      form.reset();
+      msgEl.textContent = 'Posted! Thanks for sharing.';
+      setTimeout(() => msgEl.textContent = '', 1800);
+    });
+
+    loadComments();
+  </script>
+</body>
+</html>
