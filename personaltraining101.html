@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Personal Training 101 • SageMovementLab</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="What to expect with Coach Nat: approach, pillars, and process for personal training at SageMovementLab.">
+  <link rel="stylesheet" href="Sage.css">
+  <style>
+ 
+    .training-layout {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 2rem;
+      justify-content: space-between;
+    }
+
+    .training-text {
+      flex: 1 1 65%;
+      min-width: 280px;
+    }
+
+    .training-video {
+      flex: 1 1 30%;
+      min-width: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .training-video video {
+      width: 85%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 768px) {
+      .training-layout {
+        flex-direction: column;
+      }
+      .training-video {
+        order: -1;
+        justify-content: center;
+      }
+      .training-video video {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+
+    <header class="site-header" role="banner">
+      <h1 class="sr-only">SageMovementLab</h1>
+      <a class="logo-link" href="index.html" aria-label="SageMovementLab home">
+        <img src="sagelogo.jpeg" alt="SageMovementLab logo" class="hero-logo">
+      </a>
+    </header>
+
+    <nav class="main-nav" role="navigation" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="trainingprograms.html">Training Programs</a></li>
+        <li><a href="personaltraining101.html" class="active">Personal Training 101</a></li>
+        <li><a href="self-defense.html">Self-Defense</a></li>
+        <li><a href="blog.html">Fitness Blog</a></li>
+        <li><a href="contact.html">Book / Contact</a></li>
+      </ul>
+    </nav>
+
+    <main class="content">
+      <h2>Personal Training 101</h2>
+
+      <div class="training-layout">
+        <div class="training-text">
+          <p>
+            Training with <span class="brand">SageMovementLab</span> is simple, personal, and built to last.<br>
+            I blend strength training, cardio conditioning, and martial arts principles with mindful coaching
+            so you build confidence that carries beyond the gym.
+          </p>
+
+          <section id="approach" aria-labelledby="approach-title">
+            <h3 id="approach-title">My Approach</h3>
+            <p>
+              Every plan starts with your goals, schedule, and training history.
+              From there, we create a realistic routine you can stick with — combining technique, progression, and accountability.
+              I’m a NASM-certified personal trainer and a black belt in martial arts; I coach the whole person:
+              mind, movement, and method.
+            </p>
+          </section>
+        </div>
+
+        <div class="training-video">
+          <video controls poster="poster.jpg">
+            <source src="workout.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+      <section id="pillars" aria-labelledby="pillars-title">
+        <h3 id="pillars-title">The Three Pillars</h3>
+
+        <div class="info-cards">
+          <article class="info-card">
+            <h4>Mind</h4>
+            <p>Simple cues, clear goals, and consistent habits — so progress stays steady and stress stays low.</p>
+          </article>
+
+          <article class="info-card">
+            <h4>Movement</h4>
+            <p>Foundations first: quality reps, safe technique, and scalable progressions you can feel.</p>
+          </article>
+
+          <article class="info-card">
+            <h4>Method</h4>
+            <p>Evidence-based programming with check-ins, visual feedback, and adjustments as you grow.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="expect" aria-labelledby="expect-title">
+        <h3 id="expect-title">What to Expect in a Session</h3>
+        <ul class="highlights">
+          <li>Brief check-in: sleep, energy, any aches</li>
+          <li>Warm-up for mobility + activation</li>
+          <li>Main lifts or circuits tailored to your focus</li>
+          <li>Finisher (conditioning or core) as needed</li>
+          <li>Cool-down + notes for next time</li>
+        </ul>
+      </section>
+
+      <section id="steps" aria-labelledby="steps-title">
+        <h3 id="steps-title">How It Works</h3>
+        <ol class="steps">
+          <li><strong>Free Consult:</strong> goals, schedule, preferences</li>
+          <li><strong>Assessment:</strong> movement screen + baseline metrics</li>
+          <li><strong>Training Plan:</strong> customized split + progressions</li>
+          <li><strong>Check-Ins:</strong> quick reviews with measurable wins</li>
+        </ol>
+
+        <div class="cta-row">
+          <a class="btn" href="contactme.html">Book a Free Consult</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      Copyright &copy; 2025 SageMovementLab<br>
+      Email: <span class="email">NatSage23@gmail.com</span>
+    </footer>
+
+  </div>
+</body>
+</html>
